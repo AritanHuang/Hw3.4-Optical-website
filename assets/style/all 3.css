@@ -298,6 +298,8 @@ a {
       color: #fff;
       font-size: 36px;
       margin-right: 22px; }
+  .footer .mobile-f-icon {
+    display: none; }
   .footer .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -335,5 +337,80 @@ a {
 @media (max-width: 992px) {
   .footer .copyright {
     padding-bottom: 40px; } }
+
+@media (max-width: 767px) {
+  .footer .navbar {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .footer .mobile-f-icon {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (max-width: 767px) {
+  .footer .mobile-f-icon li:not(:last-child) {
+    margin-right: 8px; } }
+
+@media (max-width: 767px) {
+  .footer .mobile-f-icon img {
+    width: 24px;
+    height: 24px; } }
+
+@media (max-width: 767px) {
+  .footer .mobile-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #fff; } }
+
+@media (max-width: 767px) {
+  .footer .contact {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0; } }
+
+@media (max-width: 767px) {
+  .footer .contact a {
+    font-size: 16px; } }
+
+@media (max-width: 767px) {
+  .footer .contact .material-icons {
+    font-size: 18px;
+    margin-right: 8px; } }
+
+@media (max-width: 767px) {
+  .footer .copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 24px; } }
+
+@media (max-width: 767px) {
+  .footer .copyright p {
+    margin-bottom: 8px; } }
+
+@media (max-width: 767px) {
+  .footer .copyright .privacy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+@media (max-width: 767px) {
+  .footer .copyright .privacy li:not(:last-child) {
+    margin-bottom: 8px; } }
+
+@media (max-width: 767px) {
+  .footer .copyright .privacy a {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=all.css.map */

@@ -1,0 +1,109 @@
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+//PC版header區塊
+.header {
+    background-color: $primary;
+    position: relative;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo a {
+        background-image: url(../images/logo-white.png);
+        display: block;
+        width: 80px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include hide-text;
+    }
+    .logo a:hover {
+        opacity: 0.7;
+    }
+    .menu {
+        display: flex;
+        width: 45%;
+        li {
+            padding: 25px $spacer * 8 25px 0;
+        }
+        a {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            display: block;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+    }
+    .show-menu {
+        color: #fff;
+        cursor: pointer;
+        display: none;
+    }
+}
+//Pad版header區塊
+.header {
+    .container {
+        @include pad() {
+            padding: 0 36px;
+        }
+    }
+    .menu {
+        @include pad() {
+            width: 70%;
+        }
+        li:last-child {
+            @include pad() {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+//mobile版header區塊
+.header {
+    .menu {
+        @include mobile() {
+            background: $primary;
+            //直式並排
+            flex-direction: column;
+            //隱藏選單
+            max-height: 0px;
+            overflow: hidden;
+            //絕對定位在header上
+            position: absolute;
+            z-index: 100;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            transition: max-height 2.5s;
+            li {
+                padding: 10px 0;
+                border-top: 2px solid #fff;
+            }
+            a {
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+    .show-menu {
+        @include mobile() {
+            display: block;
+            margin: 20px 0;
+            font-size: 40px;
+        }
+    }
+}
+// mobile版header區塊漢堡選單
+.open-menu {
+    .menu {
+        @include mobile() {
+            max-height: 400px;
+        }
+    }
+}

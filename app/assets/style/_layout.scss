@@ -169,6 +169,10 @@
             margin-right: 22px;
         }
     }
+    //pc隱藏mobile區塊
+    .mobile-f-icon {
+        display: none;
+    }
     .copyright {
         display: flex;
         justify-content: space-between;
@@ -215,3 +219,84 @@
     }
 }
 //mobile版footer區塊
+.footer {
+    //隱藏pc版footer樣式
+    .navbar {
+        @include mobile() {
+            display: none;
+        }
+    }
+    //打開mobile版footer樣式
+    .mobile-f-icon {
+        @include mobile() {
+            display: block;
+            display: flex;
+        }
+        li:not(:last-child) {
+            @include mobile() {
+                margin-right: $spacer;
+            }
+        }
+        img {
+            @include mobile() {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .mobile-navbar {
+        @include mobile() {
+            display: flex;
+            justify-content: space-between;
+            padding-top: $spacer * 3;
+            padding-bottom: ($spacer * 3)-1;
+            margin-bottom: $spacer * 2;
+            border-bottom: 1px solid #fff;
+        }
+    }
+    .contact {
+        @include mobile() {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        a {
+            @include mobile() {
+                font-size: 16px;
+            }
+        }
+        .material-icons {
+            @include mobile() {
+                font-size: 18px;
+                margin-right: $spacer;
+            }
+        }
+    }
+    .copyright {
+        //mobile版copyright變直式
+        @include mobile() {
+            flex-direction: column;
+            padding-bottom: $spacer * 3;
+        }
+        p {
+            @include mobile() {
+                margin-bottom: $spacer;
+            }
+        }
+        .privacy {
+            @include mobile() {
+                flex-direction: column;
+            }
+            li:not(:last-child) {
+                @include mobile() {
+                    margin-bottom: $spacer;
+                }
+            }
+            a {
+                @include mobile() {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

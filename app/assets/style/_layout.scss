@@ -1,5 +1,5 @@
 .container {
-    max-width: 1296px;
+    max-width: 1290px;
     margin: 0 auto;
     padding: 0 12px;
 }
@@ -26,7 +26,6 @@
     }
     .menu {
         display: flex;
-        width: 45%;
         li {
             padding: 25px $spacer * 8 25px 0;
         }
@@ -54,9 +53,6 @@
         }
     }
     .menu {
-        @include pad() {
-            width: 70%;
-        }
         li:last-child {
             @include pad() {
                 padding-right: 0px;

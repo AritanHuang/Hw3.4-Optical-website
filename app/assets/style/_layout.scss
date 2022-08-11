@@ -27,7 +27,11 @@
     .menu {
         display: flex;
         li {
-            padding: 25px $spacer * 8 25px 0;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        li:not(:last-child) {
+            padding-right: $spacer * 6;
         }
         a {
             color: #fff;
@@ -103,3 +107,111 @@
         }
     }
 }
+//PC版footer區塊
+.footer {
+    background: $primary;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 60px;
+        margin-bottom: 36px;
+    }
+    .f-menu {
+        display: flex;
+        li:not(:last-child) {
+            margin-right: $spacer * 6;
+        }
+        a {
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+    }
+    .f-icon {
+        display: flex;
+        li:not(:last-child) {
+            margin-right: $spacer * 4;
+        }
+        img {
+            width: 48px;
+            height: 48px;
+        }
+        img:hover {
+            opacity: 0.7;
+        }
+    }
+    .contact {
+        padding-bottom: ($spacer * 4)-1;
+        border-bottom: 1px solid #fff;
+        margin-bottom: $spacer * 4;
+        li {
+            display: flex;
+            align-items: center;
+        }
+        .tel-icon {
+            margin-bottom: $spacer;
+        }
+        a {
+            color: #fff;
+            font-size: 36px;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+        .material-icons {
+            color: #fff;
+            font-size: 36px;
+            margin-right: 22px;
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        padding-bottom: $spacer * 4;
+        .privacy {
+            display: flex;
+        }
+        li:not(:last-child) {
+            margin-right: $spacer * 6;
+        }
+        a {
+            font-size: 14px;
+            display: block;
+            color: #fff;
+        }
+    }
+}
+//pad版footer區塊
+.footer {
+    .navbar {
+        @include pad() {
+            padding-top: $spacer * 7;
+            margin-bottom: $spacer * 4;
+        }
+    }
+    .f-icon {
+        li:not(:last-child) {
+            @include pad() {
+                margin-right: $spacer * 2;
+            }
+        }
+        img {
+            @include pad() {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    .copyright {
+        @include pad() {
+            padding-bottom: $spacer * 5;
+        }
+    }
+}
+//mobile版footer區塊

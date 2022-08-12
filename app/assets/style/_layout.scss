@@ -1,7 +1,20 @@
+//pc container
 .container {
-    max-width: 1290px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 12px;
+}
+//pad container
+.container {
+    @include pad() {
+        max-width: 960px;
+    }
+}
+//mobile container
+.container {
+    @include mobile() {
+        max-width: 720px;
+    }
 }
 //PC版header區塊
 .header {
@@ -52,13 +65,13 @@
     }
 }
 //Pad版header區塊
-.header {
-    .container {
-        @include pad() {
-            padding: 0 36px;
-        }
-    }
-}
+// .header {
+//     .container {
+//         @include pad() {
+//             // padding: 0 36px;
+//         }
+//     }
+// }
 //mobile版header區塊
 .header {
     .menu {

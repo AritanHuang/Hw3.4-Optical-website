@@ -146,9 +146,17 @@ a {
   text-decoration: none; }
 
 .container {
-  max-width: 1290px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 12px; }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 720px; } }
 
 .header {
   background-color: #aa0601;
@@ -197,10 +205,6 @@ a {
     color: #fff;
     cursor: pointer;
     display: none; }
-
-@media (max-width: 992px) {
-  .header .container {
-    padding: 0 36px; } }
 
 @media (max-width: 767px) {
   .header .menu {
@@ -415,5 +419,39 @@ a {
 
 .content {
   padding-top: 81px; }
+
+.faq-content {
+  padding-top: 176px;
+  margin-bottom: 80px; }
+  @media (max-width: 992px) {
+    .faq-content {
+      padding-top: 160px; } }
+  @media (max-width: 767px) {
+    .faq-content {
+      padding-top: 120px;
+      margin-bottom: 64px; } }
+  .faq-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    padding-left: 8px;
+    margin-bottom: 32px;
+    border-left: 8px solid #9f1213; }
+    @media (max-width: 767px) {
+      .faq-content h2 {
+        font-size: 24px;
+        margin-bottom: 24px; } }
+  .faq-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px; }
+  .faq-content li:not(:last-child) {
+    margin-bottom: 32px; }
+    @media (max-width: 767px) {
+      .faq-content li:not(:last-child) {
+        margin-bottom: 24px; } }
+  .faq-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px; }
 
 /*# sourceMappingURL=all.css.map */

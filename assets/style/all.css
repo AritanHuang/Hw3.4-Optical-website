@@ -417,8 +417,49 @@ a {
   .footer .copyright .privacy a {
     font-size: 16px; } }
 
-.content {
-  padding-top: 81px; }
+.banner {
+  padding-top: 80px;
+  background-image: url(../images/home-header.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center center; }
+  @media (max-width: 767px) {
+    .banner {
+      background-image: url(../images/home-header-sm.png); } }
+  .banner .banner-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: right;
+    height: 100%; }
+    .banner .banner-content h2 {
+      font-size: 36px;
+      color: #650300; }
+    .banner .banner-content p {
+      font-size: 64px;
+      color: #650300;
+      font-weight: 700;
+      margin-bottom: 4px; }
+    .banner .banner-content .btn {
+      background: #aa0601;
+      color: #fff;
+      font-size: 20px;
+      width: 104px;
+      height: 41px;
+      border: none;
+      cursor: pointer; }
+    .banner .banner-content .btn:hover {
+      color: #000; }
 
 .faq-content {
   padding-top: 176px;
